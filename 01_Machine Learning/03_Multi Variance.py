@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[9]:
+# In[1]:
 
 
 import numpy as np
@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
-# In[10]:
+# In[2]:
 
 
 # Create test data
@@ -33,7 +33,7 @@ dataFrame = pd.DataFrame({
 dataFrame
 
 
-# In[11]:
+# In[3]:
 
 
 # Cai thien ham Training, su dung cong thuc nhan 2 matrix
@@ -72,7 +72,7 @@ cost_arr
 plt.plot(cost_arr)
 
 
-# In[12]:
+# In[4]:
 
 
 theta

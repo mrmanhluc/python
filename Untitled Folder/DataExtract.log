@@ -1,0 +1,127 @@
+2018-06-26 12:01:39.290 (8552): -----------------------------------------------------------------------------
+2018-06-26 12:01:39.290 (8552): Initializing fault reporting
+2018-06-26 12:01:39.290 (8552): Fault reporting log pathname: D:\02_Python\temp\Untitled Folder\tdeserver64-error_2608_18-0626-120139.log
+2018-06-26 12:01:39.290 (8552): Initializing MiniDump
+2018-06-26 12:01:39.290 (8552): Loading 'DbgHelp.dll'
+2018-06-26 12:01:39.290 (8552): Loaded 'C:\Windows\SYSTEM32\dbghelp.dll'
+2018-06-26 12:01:39.290 (8552):   Product Name: Microsoft® Windows® Operating System
+2018-06-26 12:01:39.290 (8552):   File Version: 10.0.16299.15 (WinBuild.160101.0800)
+2018-06-26 12:01:39.290 (8552):   Product Version: 10.0.16299.15
+2018-06-26 12:01:39.290 (8552): Finding function 'MiniDumpWriteDump'
+2018-06-26 12:01:39.290 (8552): Success
+2018-06-26 12:01:39.290 (8552): Registering unhandled exception filter
+2018-06-26 12:01:39.290 (8552): -----------------------------------------------------------------------------
+2018-06-26 12:01:39.290 (8552): argv[0]="C:\Users\lucnm\Anaconda3\lib\tableausdk\bin\tdeserver64.exe"
+2018-06-26 12:01:39.290 (8552): argv[1]="--callback"
+2018-06-26 12:01:39.290 (8552): argv[2]="tab.pipe://./pipe/{254ACA77-29D0-49FB-8473-444E2E6F1E83}"
+2018-06-26 12:01:39.290 (8552): argv[3]="--listen"
+2018-06-26 12:01:39.290 (8552): argv[4]="tab.pipe://./pipe/auto"
+2018-06-26 12:01:39.290 (8552): argv[5]="--desktop"
+2018-06-26 12:01:39.290 (8552): argv[6]="--log"
+2018-06-26 12:01:39.290 (8552): argv[7]="D:\02_Python\temp\Untitled Folder\DataExtract.log"
+2018-06-26 12:01:39.290 (8552): pid=2608
+2018-06-26 12:01:39.290 (8552): Machine Configuration
+2018-06-26 12:01:39.290 (8552):   Max Descriptors: -1
+2018-06-26 12:01:39.290 (8552): Vectorization Support
+2018-06-26 12:01:39.290 (8552):   Supports SSE:    Yes
+2018-06-26 12:01:39.290 (8552):   Supports SSE2:   Yes
+2018-06-26 12:01:39.290 (8552):   Supports SSE3:   Yes
+2018-06-26 12:01:39.290 (8552):   Supports SSE4.1: Yes
+2018-06-26 12:01:39.290 (8552):   Supports SSE4.2: Yes
+2018-06-26 12:01:39.290 (8552):   Supports AVX:    Yes
+2018-06-26 12:01:39.290 (8552):   Supports AVX2:   Yes
+2018-06-26 12:01:39.290 (8552): Adjusted Values
+2018-06-26 12:01:39.290 (8552):   Physical RAM:              16846184448
+2018-06-26 12:01:39.290 (8552):   CPUs available to process: 8
+2018-06-26 12:01:39.290 (8552):   worker-threads:            8
+2018-06-26 12:01:39.290 (8552):   max-concurrency:           4
+2018-06-26 12:01:39.290 (8552):   query-parallelism:         4
+2018-06-26 12:01:39.290 (8552):   min-query-parallelism:     2
+2018-06-26 12:01:39.290 (8552):   work-buffer-size:          64
+2018-06-26 12:01:39.290 (8552):   TrackingMappedFiles :      1
+2018-06-26 12:01:39.290 (8552):   MemoryMapEntireFile:       1
+2018-06-26 12:01:39.290 (8552):   use-openfile-cache:        1
+2018-06-26 12:01:39.290 (8552): tdeserver: server listening for incoming connections at: tab.pipe://./pipe/{63B65A36-266A-40B4-BD67-D29A2F97A618}
+2018-06-26 12:01:39.290 (8552): tdeserver: new connection, connection=tab.pipe://./pipe/{63B65A36-266A-40B4-BD67-D29A2F97A618}
+2018-06-26 12:01:39.305 (13812): tdeserver: open session1, connection=tab.pipe://./pipe/{63B65A36-266A-40B4-BD67-D29A2F97A618}
+2018-06-26 12:01:39.305 (17324): Session1: QueryExecute:
+2018-06-26 12:01:39.305 (17324): (create database "D:\\02_Python\\temp\\Untitled Folder\\ExtractFile.tde")
+2018-06-26 12:01:39.791 (17324): Compiling query with Memory Budget=9215614976 MemoryAvailable=9215614976
+2018-06-26 12:01:39.791 (17324): Session1: QueryExecute: OK, Elapsed time:0.486s, Compilation time:0.486s, Execution time:0.000s
+2018-06-26 13:08:49.832 (17324): Session1: QueryExecute:
+2018-06-26 13:08:49.832 (17324): (package)
+2018-06-26 13:08:49.832 (17324): Compiling query with Memory Budget=11894063104 MemoryAvailable=11894063104
+2018-06-26 13:08:49.832 (17324): PackageDatabase: in-place package of "D:\02_Python\temp\Untitled Folder\ExtractFile.tde"
+2018-06-26 13:08:49.854 (17324): PackageDatabase: finished
+2018-06-26 13:08:49.854 (17324): Session1: QueryExecute: OK, Elapsed time:0.023s, Compilation time:0.000s, Execution time:0.023s
+2018-06-26 13:08:49.854 (13812): tdeserver: close session1, connection=tab.pipe://./pipe/{63B65A36-266A-40B4-BD67-D29A2F97A618}
+2018-06-26 13:08:49.854 (8552): tdeserver: closing connection=tab.pipe://./pipe/{63B65A36-266A-40B4-BD67-D29A2F97A618}
+2018-06-26 13:08:49.854 (13812): tdeserver: disconnected connection=tab.pipe://./pipe/{63B65A36-266A-40B4-BD67-D29A2F97A618}: IPC_NamedPipeConnection::Read(len=16, connection=tab.pipe://./pipe/{63B65A36-266A-40B4-BD67-D29A2F97A618}): The pipe has been ended.
+2018-06-26 13:08:49.854 (8552): tdeserver: exit (0)
+2018-06-26 13:10:51.588 (19496): -----------------------------------------------------------------------------
+2018-06-26 13:10:51.588 (19496): Initializing fault reporting
+2018-06-26 13:10:51.589 (19496): Fault reporting log pathname: D:\02_Python\temp\Untitled Folder\tdeserver64-error_15768_18-0626-131051.log
+2018-06-26 13:10:51.590 (19496): Initializing MiniDump
+2018-06-26 13:10:51.590 (19496): Loading 'DbgHelp.dll'
+2018-06-26 13:10:51.590 (19496): Loaded 'C:\Windows\SYSTEM32\dbghelp.dll'
+2018-06-26 13:10:51.590 (19496):   Product Name: Microsoft® Windows® Operating System
+2018-06-26 13:10:51.590 (19496):   File Version: 10.0.16299.15 (WinBuild.160101.0800)
+2018-06-26 13:10:51.590 (19496):   Product Version: 10.0.16299.15
+2018-06-26 13:10:51.590 (19496): Finding function 'MiniDumpWriteDump'
+2018-06-26 13:10:51.590 (19496): Success
+2018-06-26 13:10:51.590 (19496): Registering unhandled exception filter
+2018-06-26 13:10:51.591 (19496): -----------------------------------------------------------------------------
+2018-06-26 13:10:51.591 (19496): argv[0]="C:\Users\lucnm\Anaconda3\lib\tableausdk\bin\tdeserver64.exe"
+2018-06-26 13:10:51.591 (19496): argv[1]="--callback"
+2018-06-26 13:10:51.591 (19496): argv[2]="tab.pipe://./pipe/{E4BEA10D-444A-4F45-9D68-98F71D872A34}"
+2018-06-26 13:10:51.591 (19496): argv[3]="--listen"
+2018-06-26 13:10:51.591 (19496): argv[4]="tab.pipe://./pipe/auto"
+2018-06-26 13:10:51.591 (19496): argv[5]="--desktop"
+2018-06-26 13:10:51.591 (19496): argv[6]="--log"
+2018-06-26 13:10:51.591 (19496): argv[7]="D:\02_Python\temp\Untitled Folder\DataExtract.log"
+2018-06-26 13:10:51.591 (19496): pid=15768
+2018-06-26 13:10:51.591 (19496): Machine Configuration
+2018-06-26 13:10:51.591 (19496):   Max Descriptors: -1
+2018-06-26 13:10:51.591 (19496): Vectorization Support
+2018-06-26 13:10:51.591 (19496):   Supports SSE:    Yes
+2018-06-26 13:10:51.591 (19496):   Supports SSE2:   Yes
+2018-06-26 13:10:51.591 (19496):   Supports SSE3:   Yes
+2018-06-26 13:10:51.591 (19496):   Supports SSE4.1: Yes
+2018-06-26 13:10:51.591 (19496):   Supports SSE4.2: Yes
+2018-06-26 13:10:51.591 (19496):   Supports AVX:    Yes
+2018-06-26 13:10:51.591 (19496):   Supports AVX2:   Yes
+2018-06-26 13:10:51.591 (19496): Adjusted Values
+2018-06-26 13:10:51.591 (19496):   Physical RAM:              16846184448
+2018-06-26 13:10:51.591 (19496):   CPUs available to process: 8
+2018-06-26 13:10:51.591 (19496):   worker-threads:            8
+2018-06-26 13:10:51.591 (19496):   max-concurrency:           4
+2018-06-26 13:10:51.591 (19496):   query-parallelism:         4
+2018-06-26 13:10:51.591 (19496):   min-query-parallelism:     2
+2018-06-26 13:10:51.591 (19496):   work-buffer-size:          64
+2018-06-26 13:10:51.591 (19496):   TrackingMappedFiles :      1
+2018-06-26 13:10:51.591 (19496):   MemoryMapEntireFile:       1
+2018-06-26 13:10:51.591 (19496):   use-openfile-cache:        1
+2018-06-26 13:10:51.592 (19496): tdeserver: server listening for incoming connections at: tab.pipe://./pipe/{4A07DA10-9A5B-45B0-BE04-82408FB65CA8}
+2018-06-26 13:10:51.592 (19496): tdeserver: new connection, connection=tab.pipe://./pipe/{4A07DA10-9A5B-45B0-BE04-82408FB65CA8}
+2018-06-26 13:10:51.592 (8976): tdeserver: open session1, connection=tab.pipe://./pipe/{4A07DA10-9A5B-45B0-BE04-82408FB65CA8}
+2018-06-26 13:10:51.593 (16164): Session1: QueryExecute:
+2018-06-26 13:10:51.593 (16164): (database "D:\\02_Python\\temp\\Untitled Folder\\ExtractFile.tde")
+2018-06-26 13:10:51.599 (16164): Compiling query with Memory Budget=11523399680 MemoryAvailable=11523399680
+2018-06-26 13:10:51.599 (16164): Session1: QueryExecute: OK, Elapsed time:0.006s, Compilation time:0.006s, Execution time:0.000s
+2018-06-26 13:10:51.599 (2236): Session1: QueryExecute:
+2018-06-26 13:10:51.599 (2236): (show schemas)
+2018-06-26 13:10:51.599 (2236): Compiling query with Memory Budget=11523350528 MemoryAvailable=11523350528
+2018-06-26 13:10:51.600 (2236): Session1: QueryExecute: OK rowset_guid=1 n_columns=1, Elapsed time:0.001s, Compilation time:0.000s, Execution time:0.001s
+2018-06-26 13:10:51.600 (14212): Session1: RowsetGetValues: rowset_guid=1
+2018-06-26 13:10:51.600 (6388): Session1: RowsetGetValues: rowset_guid=1
+2018-06-26 13:10:51.600 (15784): Session1: RowsetClose: rowset_guid=1
+2018-06-26 13:23:42.840 (16164): Session1: QueryExecute:
+2018-06-26 13:23:42.840 (16164): (package)
+2018-06-26 13:23:42.840 (16164): Compiling query with Memory Budget=11147137024 MemoryAvailable=11147137024
+2018-06-26 13:23:42.840 (16164): PackageDatabase: in-place package of "D:\02_Python\temp\Untitled Folder\ExtractFile.tde"
+2018-06-26 13:23:42.867 (16164): PackageDatabase: finished
+2018-06-26 13:23:42.867 (16164): Session1: QueryExecute: OK, Elapsed time:0.027s, Compilation time:0.000s, Execution time:0.027s
+2018-06-26 13:23:42.867 (8976): tdeserver: close session1, connection=tab.pipe://./pipe/{4A07DA10-9A5B-45B0-BE04-82408FB65CA8}
+2018-06-26 13:23:42.867 (19496): tdeserver: closing connection=tab.pipe://./pipe/{4A07DA10-9A5B-45B0-BE04-82408FB65CA8}
+2018-06-26 13:23:42.868 (8976): tdeserver: disconnected connection=tab.pipe://./pipe/{4A07DA10-9A5B-45B0-BE04-82408FB65CA8}: IPC_NamedPipeConnection::Read(len=16, connection=tab.pipe://./pipe/{4A07DA10-9A5B-45B0-BE04-82408FB65CA8}): The pipe has been ended.
+2018-06-26 13:23:42.868 (19496): tdeserver: exit (0)

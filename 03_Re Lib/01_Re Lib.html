@@ -11863,7 +11863,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
@@ -11946,11 +11946,11 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">text2</span> <span class="o">=</span> <span class="s1">&#39;split the words&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;the&#39;</span><span class="p">,</span> <span class="n">text2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;</span><span class="se">\&#39;</span><span class="s1">, text2))</span>
 </pre></div>
 
 </div>
@@ -11967,7 +11967,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;split &#39;, &#39; words&#39;]
+<pre>[&#39;split the words&#39;]
 </pre>
 </div>
 </div>
@@ -12522,6 +12522,146 @@ file002.txt
 
 <div class="output_text output_subarea output_execute_result">
 <pre>&#39;true&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">txt</span> <span class="o">=</span> <span class="s1">&#39;abc123abc&#39;</span>
+<span class="n">txt1</span> <span class="o">=</span> <span class="s1">&#39;123234&#39;</span>
+<span class="n">input_txt</span> <span class="o">=</span> <span class="s1">&#39;2018/03/03 03:02&#39;</span>
+
+<span class="k">def</span> <span class="nf">is_date</span><span class="p">(</span><span class="n">in_data</span><span class="p">):</span>
+    <span class="c1"># Kiểm tra có phải là số không</span>
+    <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^[0-9]+$&#39;</span><span class="p">,</span> <span class="n">txt1</span><span class="p">)</span>
+
+    <span class="c1"># Kiểm tra str có phải dạng datetime không</span>
+    <span class="n">pattern1</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;^\d\d\d\d/\d\d/\d\d$&#39;</span>
+    <span class="n">pattern2</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;^\d\d\/\d\d/\d\d$&#39;</span>
+    <span class="n">pattern3</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;^\d\d\d\d\/\d\d\/\d\d \d\d\:\d\d$&#39;</span>
+    <span class="n">pattern4</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;^\d\d\/\d\d\/\d\d \d\d\:\d\d$&#39;</span>
+    <span class="n">pattern</span> <span class="o">=</span> <span class="p">[</span><span class="n">pattern1</span><span class="p">,</span> <span class="n">pattern2</span><span class="p">,</span> <span class="n">pattern3</span><span class="p">,</span> <span class="n">pattern4</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">pt</span> <span class="ow">in</span> <span class="n">parterm</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">pt</span><span class="p">,</span> <span class="n">in_data</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span>
+
+<span class="k">def</span> <span class="nf">is_num</span><span class="p">(</span><span class="n">in_data</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">in_data</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">get_dataType</span><span class="p">(</span><span class="n">in_data</span><span class="p">):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">is_date</span><span class="p">(</span><span class="n">in_data</span><span class="p">)):</span>
+        <span class="k">return</span> 
+
+<span class="c1"># re.findall(r&#39;^a.*&#39;, txt1)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>None
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[51]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[108]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">date</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-108-a975c295ddea&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>date
+
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;date&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[107]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;3123123121214&#39;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[107]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
 </div>
 
 </div>

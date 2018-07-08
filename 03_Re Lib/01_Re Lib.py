@@ -22,7 +22,7 @@
 #  [A-Z]{6} 				|	6 kí tự bất kì từ A-Z
 # $ 						|	Kết thúc chuỗi
 
-# In[21]:
+# In[1]:
 
 
 import re
@@ -63,11 +63,11 @@ r4 = re.findall(r'g\w+', text)
 print(r4)
 
 
-# In[40]:
+# In[11]:
 
 
 text2 = 'split the words'
-print(re.split(r'the', text2))
+print(re.split(r'\', text2))
 
 
 # In[83]:
@@ -243,4 +243,49 @@ re.findall(r'\d\d-[A-Z][0-9]', temp)
 
 
 str(True).lower()
+
+
+# In[51]:
+
+
+txt = 'abc123abc'
+txt1 = '123234'
+input_txt = '2018/03/03 03:02'
+
+def is_date(in_data):
+    # Kiểm tra có phải là số không
+    re.match(r'^[0-9]+$', txt1)
+
+    # Kiểm tra str có phải dạng datetime không
+    pattern1 = r'^\d\d\d\d/\d\d/\d\d$'
+    pattern2 = r'^\d\d\/\d\d/\d\d$'
+    pattern3 = r'^\d\d\d\d\/\d\d\/\d\d \d\d\:\d\d$'
+    pattern4 = r'^\d\d\/\d\d\/\d\d \d\d\:\d\d$'
+    pattern = [pattern1, pattern2, pattern3, pattern4]
+
+    for pt in parterm:
+        if re.match(pt, in_data) is not None:
+            return True
+    return False
+
+def is_num(in_data):
+    return in_data.replace('.','',1).isdigit()
+
+def get_dataType(in_data):
+    if (is_date(in_data)):
+        return 
+
+# re.findall(r'^a.*', txt1)
+
+
+# In[108]:
+
+
+date
+
+
+# In[107]:
+
+
+'3123123121214'.replace('.','',1).isdigit()
 

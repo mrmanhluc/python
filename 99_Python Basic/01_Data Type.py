@@ -45,7 +45,7 @@ x.sort()
 
 # ## 2. Tuple
 
-# In[54]:
+# In[1]:
 
 
 # Cách sử dụng Tubple  : Tuple data
@@ -63,6 +63,12 @@ z = zip(x1, x2)
 # Select su dung enumerate
 for name, mark in enumerate(z):
     print(name, mark)
+
+
+# In[ ]:
+
+
+x1.
 
 
 # In[55]:

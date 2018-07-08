@@ -7,7 +7,7 @@
 # Phương trình hàm bậc 1 y = ax + b
 
 
-# In[2]:
+# In[1]:
 
 
 import numpy as np
@@ -18,13 +18,13 @@ X = np.random.randn(100)
 Y = X*5 + np.random.randn(100)
 
 
-# In[3]:
+# In[2]:
 
 
 plt.plot(X, Y, 'bo')
 
 
-# In[4]:
+# In[5]:
 
 
 #Step 1 : select random a and b
@@ -45,15 +45,16 @@ cost_arr = []
 for x in np.arange(100):
     temp = yhat(a,b)
     a = a - learning_rate * np.sum((temp - Y)*X)/m
-    b = b - learning_rate * np.sum((temp - Y))/m
+    b = b - learning_rate * np.sum((temp kjh- Y))/m
     cost_arr.append(cost(yhat(a,b)))
+    print(np.sum((temp - Y)*X)/m, np.sum((temp - Y))/m)
     
 cost_arr
 
 plt.plot(cost_arr)
 
 
-# In[5]:
+# In[4]:
 
 
 plt.plot(X,Y, 'ro')
